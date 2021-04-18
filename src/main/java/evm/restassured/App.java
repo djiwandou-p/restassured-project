@@ -1,6 +1,8 @@
 package evm.restassured;
 import static io.restassured.RestAssured.*;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
@@ -21,5 +23,12 @@ public class App
 		System.out.println(response.getBody().asString());
 		System.out.println(response.statusLine());
         
+    }
+    
+    @Test 
+    public void test() {
+    	Response response = RestAssured.get("https://reqres.in/api/users?page=2");
+    	int statusCode = response.getStatusCode();
+		Assert.assertEquals(statusCode, 200);
     }
 }

@@ -19,6 +19,12 @@
      <artifactId>rest-assured</artifactId>
      <version>4.3.0</version>
      <scope>compile</scope>
-    </dependency>   
+    </dependency>
+    <dependency>
+     <groupId>org.testng</groupId>
+     <artifactId>testng</artifactId>
+     <version>7.1.0</version>
+     <scope>compile</scope>
+	</dependency>   
   </dependencies>
 </project>
